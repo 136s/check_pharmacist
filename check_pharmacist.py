@@ -3,7 +3,7 @@ import pandas as pd
 from selenium import webdriver
 
 SEARCH_URL = "https://licenseif.mhlw.go.jp/search_iyaku/top.jsp"
-SLEEP_SEC = 0.5
+SLEEP_SEC = 3
 IN_CSV_NAME = "./list.csv"
 OUT_CSV_NAME = "./output.csv"
 
