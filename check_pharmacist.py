@@ -3,7 +3,7 @@ import pandas as pd
 from selenium import webdriver
 
 SEARCH_URL = "https://licenseif.mhlw.go.jp/search_iyaku/top.jsp"
-SLEEP_SEC = 3
+SLEEP_SEC = 0.5
 IN_CSV_NAME = "./list.csv"
 OUT_CSV_NAME = "./output.csv"
 
@@ -22,7 +22,7 @@ def get_years(name) :
     return years
 
 # csv は name, years カラムの 2 行からなる（ヘッダー付き） 
-df = pd.read_csv(IN_CSV_NAME, encoding="shift-jis")
+df = pd.read_csv(IN_CSV_NAME)
 df["years"] = df["years"].astype(str)
 
 driver = webdriver.Chrome()
@@ -31,4 +31,4 @@ for i, _ in df.iterrows():
     df.at[i, "years"] = " ".join(result) # スペース区切りで格納
 driver.quit()
 
-df.to_csv(OUT_CSV_NAME, encoding="shift_jis", index=False)
+df.to_csv(open(OUT_CSV_NAME, "w", encoding="utf_8_sig", newline=""), index=False)
