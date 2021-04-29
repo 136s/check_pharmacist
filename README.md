@@ -2,7 +2,7 @@
 ## このリポジトリについて
 - [確認したい名前の CSV](list.csv) を読み込んで、登録年のリストをスクレイプする Python スクリプト
 - 出力イメージは [output.csv](output.csv)
-- list.csv の名前は [東京大学大学院 薬学系研究科・薬学部](http://www.f.u-tokyo.ac.jp/research/) の薬学に記載のある方々をお借りした（2021-04-29 現在）
+- list.csv の名前は [公益社団法人日本薬剤師会](https://www.nichiyaku.or.jp/about/summary/publicationAbout.html) の [役員名簿 [PDF]](https://www.nichiyaku.or.jp/assets/uploads/about/202007_meibo.pdf) の方々の名前をお借りした（2021-04-29 現在）
 
 ## 環境準備
 - 詳しい説明は @memakura さんの [Python + Selenium で Chrome の自動操作を一通り - Qiita](https://qiita.com/memakura/items/20a02161fa7e18d8a693) を参照されたい
